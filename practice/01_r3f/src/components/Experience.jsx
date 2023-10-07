@@ -1,4 +1,3 @@
-import { Fish } from "./Fish";
 import { Deno } from "./Deno";
 import { Background } from "./Background";
 import { Html, useGLTF } from "@react-three/drei";
@@ -14,8 +13,11 @@ import { Vector2, Color } from "three";
 
 
 export const Experience = () => {
-  const { scene } = useGLTF("models/scene.gltf");
+//  const { scene } = useGLTF("models/scene.gltf");
+  //const { scene } = useGLTF("wp-content/themes/twentytwentythree/r3f/models/scene.gltf");
+  const { scene } = useGLTF(`${import.meta.env.VITE_R3F_ASSET_PATH}models/scene.gltf`);
 
+  
   const [denoSelected, setDenoSelected] = useState(false);
 
   const mesh = useRef();

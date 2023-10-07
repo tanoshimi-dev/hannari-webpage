@@ -13,8 +13,11 @@ export function Deno(props) {
   // dancing[0].name = "Dancing";
 
   const group = useRef()
-  const { nodes, materials, animations } = useGLTF('/models/Deno.gltf')
-    //const { actions } = useAnimations([dancing[0],...animations], group)
+  //const { nodes, materials, animations } = useGLTF('models/Deno.gltf')
+  //const { nodes, materials, animations } = useGLTF('wp-content/themes/twentytwentythree/r3f/models/Deno.gltf')
+  const { nodes, materials, animations } = useGLTF(`${import.meta.env.VITE_R3F_ASSET_PATH}models/Deno.gltf`)
+
+  //const { actions } = useAnimations([dancing[0],...animations], group)
     const { actions } = useAnimations(animations, group)
 
   const [{ animation }, set] = useControls(()=>({

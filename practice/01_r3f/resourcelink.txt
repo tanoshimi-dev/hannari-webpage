@@ -1,7 +1,9 @@
 3Dモデル
 https://quaternius.com/
 dkechfab
+gltf
+Quatenius
+npx gltfjsx public/models/Deno.gltf -o src/components/Deno.jsx -r public
 
 テクスチャ―
 unsplash
-
